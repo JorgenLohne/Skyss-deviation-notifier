@@ -52,7 +52,8 @@ def main():
         if arg in affected_routes.keys():
             print(f"Deviation in route {arg}:")
             print(affected_routes[str(arg)] + "\n" + ("-" * 10))
-
+        else:
+            print(f"No devition found for route {arg}")
 
 if __name__ == "__main__":
     main()
