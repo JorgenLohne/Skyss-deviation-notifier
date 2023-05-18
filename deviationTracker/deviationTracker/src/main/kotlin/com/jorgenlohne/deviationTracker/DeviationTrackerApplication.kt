@@ -8,5 +8,4 @@ class DeviationTrackerApplication
 
 fun main(args: Array<String>) {
 	runApplication<DeviationTrackerApplication>(*args)
-	println("hello world")
 }
