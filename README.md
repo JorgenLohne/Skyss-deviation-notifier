@@ -26,12 +26,10 @@ In the case that a lot of lines are grouped togheter as one deviation, it might 
 
 Example:
 
-Cropped screenshot of [skyss.no/avvik](https://www.skyss.no/avvik/) showcasing a list of deviations as of 19.05.2023
-//TODO inseet screenshot
+![Screenshot showcasing a list of deviations as of 19.05.2023](pics/deviationExample.png)
 
 
-The lines: 3, 3E, 4, 4E, 10, 12, 16E, 18, 19 and 39.
-are expirincing a deviation in their regualar service, but the scraper is only able to detect deviations in lines: 
+The lines: 3, 3E, 4, 4E, 10, 12, 16E, 18, 19 39, are expirincing a deviation in their regualar service, but the scraper is only able to detect deviations in lines: 
 3, 3E, 4, 4E, 10, 12,  
 missing the lines: 
 16E, 18, 19, 39.
