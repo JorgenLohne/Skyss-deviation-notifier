@@ -12,19 +12,20 @@ class SkyssScraperService {
     val DEVIATION = "accordion--driftsmelding"
     val ROUTE = "accordion__route-numbers"
     val CONTENT = "accordion__content"
+    val HEADING = "accordion__heading"
 
 
     /**
      * Scrapes deviations from Skyss maps them to deviation Objects
      * */
-    fun getCurrentDeviations(): List<Deviation> {
+    fun getCurrentDeviations(): Iterable<Deviation> {
         val doc: Document = Jsoup.connect(SKYSS_DEVIATON_URL).get();
 
         return mapDocumentToDeviations(doc)
     }
 
 
-    private fun mapDocumentToDeviations(doc: Document): List<Deviation> {
+    private fun mapDocumentToDeviations(doc: Document): Iterable<Deviation> {
 
         return doc.getElementsByClass(DEVIATION)
             .map { e ->
@@ -33,6 +34,7 @@ class SkyssScraperService {
                         .replace(" ", "")
                         .replace(".", "")
                         .split(","),
+                    e.getElementsByClass(HEADING).text(),
                     e.getElementsByClass(CONTENT).text(),
                     true
                 )
