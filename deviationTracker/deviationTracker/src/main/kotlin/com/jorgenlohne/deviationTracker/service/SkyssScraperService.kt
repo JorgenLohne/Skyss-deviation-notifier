@@ -16,7 +16,22 @@ class SkyssScraperService {
 
 
     /**
-     * Scrapes deviations from Skyss maps them to deviation Objects
+     * Get all routes that are experiencing a deviation.
+     * */
+    fun getCurrentDeviationRoutes(): Iterable<String> {
+        val doc: Document = Jsoup.connect(SKYSS_DEVIATON_URL).get();
+        return doc.getElementsByClass(DEVIATION)
+            .flatMap {
+                it.getElementsByClass(ROUTE).text()
+                    .replace(" ", "")
+                    .replace(".", "")
+                    .split(",")
+            }
+    }
+
+
+    /**
+     * Scrapes deviations from Skyss and maps to deviation Objects.
      * */
     fun getCurrentDeviations(): Iterable<Deviation> {
         val doc: Document = Jsoup.connect(SKYSS_DEVIATON_URL).get();

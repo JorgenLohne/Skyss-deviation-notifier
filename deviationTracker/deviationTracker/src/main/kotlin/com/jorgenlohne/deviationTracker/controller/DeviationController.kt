@@ -12,19 +12,38 @@ import org.springframework.web.bind.annotation.RestController
 class DeviationController(val service: DeviationService) {
 
 
+    /**
+     * Endpoint for sanity checking
+     * */
     @GetMapping("hello")
     fun sanityCheck(): String {
         return "Hello!"
     }
 
+    /**
+     * Get all current deviations
+     * */
     @GetMapping("all")
     fun getAll(): Iterable<Deviation> {
         return service.getAllDeviations()
     }
 
+
+    /**
+     * Get deviations by route, if there is a deviation for the route
+     * */
     @GetMapping("route")
     fun getRoute(@RequestParam("route") routes: List<String>): Iterable<Deviation> {
         return service.getDeviationsByRoute(routes)
+    }
+
+
+    /**
+     * Get routes that are experiencing a deviation
+     * */
+    @GetMapping("active")
+    fun getRoutes(): Iterable<String> {
+        return service.getCurrentDeviationRoutes()
     }
 
 }

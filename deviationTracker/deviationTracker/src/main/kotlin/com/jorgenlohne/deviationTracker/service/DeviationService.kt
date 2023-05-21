@@ -10,6 +10,12 @@ class DeviationService(val scraperService: SkyssScraperService) {
         return scraperService.getCurrentDeviations()
     }
 
+
+    fun getCurrentDeviationRoutes(): Iterable<String> {
+        return scraperService.getCurrentDeviationRoutes()
+    }
+
+
     fun getDeviationsByRoute(queryRoutes: Iterable<String>): Iterable<Deviation> {
         val currentDeviations: Iterable<Deviation> = scraperService.getCurrentDeviations()
 
