@@ -26,7 +26,8 @@ Navigate to the root directory and run `docker run` or `docker compose up` in a 
 
 
 #### Native
-Navigate to the root folder, run `mvn build` in a terminal
+Navigate to the root folder, run `mvn build` in a terminal to build the application.
+To run the application run `mvn run` in a terminal.
 
 
 ## Limitations
