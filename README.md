@@ -8,11 +8,25 @@ The API wraps a web scaper for [skyss.no/avvik](https://www.skyss.no/avvik/)
 Written in Kotlin using [SpringBoot](https://spring.io/projects/spring-boot) for API and [Jsoup](https://github.com/jhy/jsoup) for web scarping
 
 
-## How to build
-TODO
+## Building the application
 
-## Documentaion
-TODO
+### Requirments
+
+For running in docker, the app only requires docker as building is handledin a container.
+
+If running nativly:
+- A distrution of JDK17
+- [Maven](https://maven.apache.org/)
+
+### Build and run
+
+#### Docker
+Navigate to the root directory and run `docker run` or `docker compose up` in a terminal 
+
+
+
+#### Native
+Navigate to the root folder, run `mvn build` in a terminal
 
 
 ## Limitations
