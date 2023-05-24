@@ -27,7 +27,5 @@ jobs:
         java-version: '17'
         distribution: 'corretto'
         cache: maven
-    - name: print current dir
-      run: ls -lh
     - name: Build with Maven
       run: mvn clean install -f deviationTracker/deviationTracker/pom.xml
