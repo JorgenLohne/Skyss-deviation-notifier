@@ -30,7 +30,7 @@ jobs:
     - name: print current dir
       run: ls -lh
     - name: Build with Maven
-      run: mvn clean install -f pom.xml
+      run: mvn clean install -f deviationTracker/deviationTracker/pom.xml
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
