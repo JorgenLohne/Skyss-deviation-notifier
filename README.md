@@ -51,5 +51,15 @@ missing the lines:
 
 This could possbily be addressed in the future by creating a set of known routes, and then searching the message of all deviations of routes.
 
+
+## API documentation
+Documentation is auto-generated using [springdoc-openapi](https://github.com/springdoc/springdoc-openapi). 
+
+When Running the application it will be aviable as swagger-ui located at `http://server:port/context-path/swagger-ui.html`
+
+Which if using the deafult configuration will be: `http://localhost:8080/swagger-ui.html` when running localy.
+
+It is also avaible as be availbe as json: `http://server:port/context-path/v3/api-docs`
+
 ## License
 See: [LICENSE.md](LICENSE.md)
